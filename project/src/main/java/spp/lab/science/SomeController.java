@@ -10,7 +10,7 @@ public class SomeController {
 
     @GetMapping
     public String getStatus() {
-        return "Success";
+        return "OK";
     }
 
 }
