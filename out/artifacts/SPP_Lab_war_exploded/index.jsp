@@ -10,7 +10,7 @@
     <head>
 
         <!-- include libraries(jQuery, bootstrap) -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -20,19 +20,32 @@
         <title>$Title$</title>
     </head>
     <body>
-        <header  style ="background-color: white">
-            <div class="container" style ="background-color: white">
-                <header class="d-flex justify-content-center py-3" style ="background-color: white">
-                    <ul class="nav nav-pills" style ="background-color: white">
-                        <li class="nav-item" style ="background-color: white"><a href="main.html" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item" style ="background-color: white"><a href="#" class="nav-link">Shop</a></li>
-                        <li class="nav-item" style ="background-color: white"><a href="#" class="nav-link">Blog</a></li>
-                        <li class="nav-item" style ="background-color: white"><a href="#" class="nav-link">Pages</a></li>
-                        <li class="nav-item" style ="background-color: white"><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </header>
-            </div>
-        </header>
+    <header class="bg-dark">
+        <div class="container ">
+            <header class="d-flex justify-content-center py-3" >
+                <ul class="nav nav-pills" >
+                    <li class="nav-item " ><a href="main.html" class="nav-link" aria-current="page">Home</a></li>
+                    <li class="nav-item " ><a href="#" class="nav-link active">Document</a></li>
+                    <li class="nav-item " ><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item " ><a href="#" class="nav-link">Pages</a></li>
+                    <li class="nav-item " ><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </header>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">File Editor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample02" >
+            <button type="button" class="btn btn-light" style="margin-right: 5px">Back</button>
+            <button type="button" class="btn btn-light" style="margin-right: 5px">Load</button>
+            <button type="button" class="btn btn-light" style="margin-right: 5px">Save</button>
+        </div>
+
+    </nav>
         <form method="post">
             <textarea id="summernote" name="editordata"></textarea>
         </form>
