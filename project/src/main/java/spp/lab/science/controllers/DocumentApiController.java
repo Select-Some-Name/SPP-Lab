@@ -1,7 +1,9 @@
-package spp.lab.science;
+package spp.lab.science.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import spp.lab.science.models.DocumentModel;
+import spp.lab.science.repositories.DocumentRepository;
 
 import java.util.Optional;
 

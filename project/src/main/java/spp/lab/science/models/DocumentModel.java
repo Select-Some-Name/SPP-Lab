@@ -1,4 +1,4 @@
-package spp.lab.science;
+package spp.lab.science.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
