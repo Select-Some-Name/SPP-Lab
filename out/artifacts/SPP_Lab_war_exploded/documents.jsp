@@ -16,6 +16,7 @@
     <link href="album.css" rel="stylesheet">
 
     <script src="holder.min.js"></script>
+
 </head>
 <body>
 <header class="bg-dark">

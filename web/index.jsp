@@ -17,7 +17,32 @@
         <!-- include summernote css/js -->
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-        <title>$Title$</title>
+
+        <script>
+
+            function download_elem(el, filename) {
+                var saveData = (function () {
+                    var a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.style = "display: none";
+                    return function (data, fileName) {
+                        var blob = new Blob([data], {type: "octet/stream"}),
+                            url = window.URL.createObjectURL(blob);
+                        a.href = url;
+                        a.download = fileName;
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                    };
+                }());
+
+                var data = el.innerHTML,
+                    fileName = filename;
+
+                saveData(data, fileName);
+            }
+
+        </script>
+
     </head>
     <body>
     <header class="bg-dark">
@@ -43,9 +68,11 @@
             <button type="button" class="btn btn-light" style="margin-right: 5px">Back</button>
             <button type="button" class="btn btn-light" style="margin-right: 5px">Load</button>
             <button type="button" class="btn btn-light" style="margin-right: 5px">Save</button>
+            <button type="button" class="btn btn-light" style="margin-right: 5px" onclick="download_elem(document.getElementsByClassName('note-editable')[0], 'div.html');">Download</button>
         </div>
 
     </nav>
+    <input class="form-control" placeholder="Title" required>
         <form method="post">
             <textarea id="summernote" name="editordata"></textarea>
         </form>
